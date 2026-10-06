@@ -1,0 +1,21 @@
+body {
+ background-color: #2EAB78;
+ font-family: Arial;
+ text-align: center;
+}
+h1 {
+  color: purple;
+}
+.mon-bouton1 {
+  background-color: #3498db;
+  padding: 12px 40px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  padding: 0;
+}
+.mon-bouton2 {
+  background-color: #db3461;
+  padding: 12px 24px;
+  font-size: 18px;
+}

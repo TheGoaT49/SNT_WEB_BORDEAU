@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Page d'Olivier B</title>
+ <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ <h1>Lycée F. RENAUDEAU 2GT7</h1>
+ <p id="texte2">Bienvenue sur mon premier TP_WEB </p>
+ 
+ <div style="text-align: center;">
+    <img src="image_pinguin.svg" width="300">
+</div>
+ <button class="mon-bouton1" onclick="alert('résultat1')">Cliquez ici</button>
+ <button class="mon-bouton2" onclick="alert('résultat2')">Cliquez là</button>
+ <p id="texte1">Réalisation en 2026 par </p>
+<button onclick="changerTexte1()">Nom de l'élève</button>
+<button onclick="changerTexte2()">Date de Réalisation</button>
+</body>
+</html>
+<script>
+function changerTexte1() {
+ document.getElementById("texte1").innerHTML = "O. BORDEAU";
+ document.getElementById("texte1").style.color = "red";
+}
+function changerTexte2() {
+ document.getElementById("texte2").innerHTML = "Octobre 2026";
+ document.getElementById("texte2").style.color = "pink";
+}
+</script>
