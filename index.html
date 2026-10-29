@@ -1,30 +1,90 @@
+
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
- <title>Page d'Olivier B</title>
- <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>Page d'Olivier B</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
- <h1>Lycée F. RENAUDEAU 2GT7</h1>
- <p id="texte2">Bienvenue sur mon premier TP_WEB </p>
- 
- <div style="text-align: center;">
-    <img src="image_pinguin.svg" width="300">
-</div>
- <button class="mon-bouton1" onclick="alert('résultat1')">Cliquez ici</button>
- <button class="mon-bouton2" onclick="alert('résultat2')">Cliquez là</button>
- <p id="texte1">Réalisation en 2026 par </p>
-<button onclick="changerTexte1()">Nom de l'élève</button>
-<button onclick="changerTexte2()">Date de Réalisation</button>
+
+    <h1>Lycée F. RENAUDEAU 2GT7</h1>
+
+    <p id="texte2">Bienvenue sur mon premier TP_WEB</p>
+
+    <div id="conteneur-image">
+        <img id="pingouin" src="image_pinguin.svg" width="300" alt="Pingouin">
+    </div>
+
+    <button class="mon-bouton1" onclick="alert('résultat1')">
+        Cliquez ici
+    </button>
+
+    <button class="mon-bouton2" onclick="alert('résultat2')">
+        Cliquez là
+    </button>
+
+    <p id="texte1">Réalisation en 2026 par</p>
+
+    <button onclick="changerTexte1()">Nom de l'élève</button>
+    <button onclick="changerTexte2()">Date de réalisation</button>
+
+    <hr>
+
+    <h2>Mes nouvelles fonctionnalités</h2>
+
+    <button onclick="changerFond()">Changer le fond</button>
+
+    <button onclick="cacherImage()">Afficher / Masquer le pingouin</button>
+
+    <p>Nombre de clics : <span id="compteur">0</span></p>
+    <button onclick="compterClic()">Compter un clic</button>
+
+    <button onclick="bienvenue()">Message de bienvenue</button>
+
+    <script>
+        // Modifier le nom de l'élève
+        function changerTexte1() {
+            document.getElementById("texte1").textContent = "O. BORDEAU";
+            document.getElementById("texte1").style.color = "red";
+        }
+
+        // Modifier la date
+        function changerTexte2() {
+            document.getElementById("texte2").textContent = "Octobre 2026";
+            document.getElementById("texte2").style.color = "pink";
+        }
+
+        // 1. Changer la couleur du fond
+        function changerFond() {
+            document.body.style.backgroundColor = "lightblue";
+        }
+
+        // 2. Afficher ou masquer le pingouin
+        function cacherImage() {
+            let image = document.getElementById("pingouin");
+
+            if (image.hidden === true) {
+                image.hidden = false;
+            } else {
+                image.hidden = true;
+            }
+        }
+
+        // 3. Compter les clics
+        let clics = 0;
+
+        function compterClic() {
+            clics = clics + 1;
+            document.getElementById("compteur").textContent = clics;
+        }
+
+        // 4. Afficher un message
+        function bienvenue() {
+            alert("Bienvenue sur le site du lycée !");
+        }
+    </script>
+
 </body>
 </html>
-<script>
-function changerTexte1() {
- document.getElementById("texte1").innerHTML = "O. BORDEAU";
- document.getElementById("texte1").style.color = "red";
-}
-function changerTexte2() {
- document.getElementById("texte2").innerHTML = "Octobre 2026";
- document.getElementById("texte2").style.color = "pink";
-}
-</script>
